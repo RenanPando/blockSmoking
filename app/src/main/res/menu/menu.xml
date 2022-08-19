@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/iconeMenu"
+            android:icon="@drawable/ic_round_menu_24"
+            android:title=""
+            android:checkable="false"
+            app:showAsAction="ifRoom" />
+
+        <item
+            android:id="@+id/itemConta"
+            android:icon="@drawable/ic_account"
+            android:title="Conta"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/itemRegistros"
+            android:icon="@drawable/ic_registros"
+            android:title="Registros"
+            app:showAsAction="never"/>
+
+        <item
+            android:id="@+id/itemGraficos"
+            android:icon="@drawable/ic_graph"
+            android:title="Gráficos Mensais"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/itemGastos"
+            android:icon="@drawable/ic_gastos"
+            android:title="Gastos Mensais"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/itemConfig"
+            android:icon="@drawable/ic_config"
+            android:title="Configurações"
+            app:showAsAction="never" />
+    </group>
+</menu>
