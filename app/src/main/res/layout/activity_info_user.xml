@@ -8,7 +8,7 @@
     android:background="@color/azulsereno">
 
     <TextView
-        android:id="@+id/teste"
+        android:id="@+id/chart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="270dp"
@@ -39,7 +39,7 @@
         app:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/teste" />
+        app:layout_constraintTop_toBottomOf="@+id/chart" />
 
     <Button
         android:id="@+id/btnVape"

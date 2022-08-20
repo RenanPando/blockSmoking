@@ -3,6 +3,8 @@ package com.example.appfumas.Classes;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Calendar;
+
 public class Usuario {
     String id, nome, email, senha, meio, gênero, dataNasc, estadoUser;
 
@@ -32,11 +34,6 @@ public class Usuario {
     public void salvarInfo(){
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
         ref.child("User").child(id).child("Info").setValue(this);
-    }
-
-    public void realizarRegistro(){
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
-        ref.child("User").child(id).child("Registros").setValue(this);
     }
 
     public String getId() {

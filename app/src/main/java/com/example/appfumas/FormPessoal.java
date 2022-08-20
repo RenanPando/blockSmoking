@@ -14,10 +14,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.example.appfumas.Classes.Registros;
 import com.example.appfumas.Classes.Usuario;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
+import com.example.appfumas.Fragments.FragmentHome;
+import com.example.appfumas.Fragments.FragmentRegistros;
 
 public class FormPessoal extends AppCompatActivity {
     AutoCompleteTextView actv1, actv2, actv3;
@@ -42,7 +42,7 @@ public class FormPessoal extends AppCompatActivity {
         m = findViewById(R.id.rMasc);
         nb = findViewById(R.id.rNb);
         nulo = findViewById(R.id.rNull);
-        c = findViewById(R.id.btnContinuar);
+        c = findViewById(R.id.bRegistrar);
 
         // adaptadores
         String[] dias = getResources().getStringArray(R.array.dias);
@@ -92,6 +92,7 @@ public class FormPessoal extends AppCompatActivity {
         String s = senha.getText().toString();
         String[] split = e.split("@");
         String id = split[0];
+        Registros.id = id;
         TelaFumante.id = id;
         TelaFumante.gen = gen;
         TelaFumante.dataNasc = dataNasc;

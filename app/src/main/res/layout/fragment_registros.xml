@@ -8,34 +8,22 @@
     android:background="@color/azulsereno">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/txt_bemvindo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="SEJA BEM-VINDO, USUÁRIO!"
-        android:fontFamily="@font/montextra"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="70dp"
         android:fontFamily="@font/mont"
         android:text="Como você se sente?"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_bemvindo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.github.mikephil.charting.charts.BarChart
-        android:id="@+id/teste"
+        android:id="@+id/chart"
         android:layout_width="370dp"
         android:layout_height="250dp"
         android:layout_marginTop="40dp"
@@ -54,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView12">
 
         <RadioButton
-            android:id="@+id/rBem"
+            android:id="@+id/rFeliz"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/view"
@@ -67,7 +55,7 @@
             android:textSize="12sp" />
 
         <RadioButton
-            android:id="@+id/rMal"
+            android:id="@+id/rTriste"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -87,8 +75,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/mont"
-        android:text="Você fumou? Se sim, quantas\nvezes?"
         android:gravity="center"
+        android:text="Quantos cigarros você fumou hoje?"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -168,12 +156,14 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnContinuar"
+        android:id="@+id/bRegistrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="70dp"
         android:background="@drawable/rounded"
         android:fontFamily="@font/montextra"
-        android:onClick="realizarRegistro"
+        android:onClick="realizarRegistros"
         android:paddingStart="45dp"
         android:paddingEnd="45dp"
         android:text="REGISTRAR"

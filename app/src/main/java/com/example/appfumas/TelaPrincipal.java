@@ -8,12 +8,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.appfumas.Fragments.FragmentGraficos;
+import com.example.appfumas.Fragments.FragmentHome;
 import com.example.appfumas.Fragments.FragmentRegistros;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
@@ -31,7 +32,8 @@ public class TelaPrincipal extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
         nav_view = findViewById(R.id.navigation_view);
         getWindow().setStatusBarColor(getResources().getColor(R.color.whiteish));
-        replaceFragment(new FragmentRegistros());
+        replaceFragment(new FragmentHome());
+        toolbar.setTitle("Início");
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,19 +48,16 @@ public class TelaPrincipal extends AppCompatActivity {
                 item.setChecked(true);
                 drawerLayout.closeDrawer(GravityCompat.START);
                 switch(id){
-
-                    case R.id.itemConta:
-                        Toast.makeText(TelaPrincipal.this, "teste conta", Toast.LENGTH_SHORT).show();
                     case R.id.itemRegistros:
                         replaceFragment(new FragmentRegistros());
+                        toolbar.setTitle("Registros");
                         break;
-                    case R.id.itemGraficos:
-                        replaceFragment(new FragmentGraficos());
+                    case R.id.itemHome:
+                        replaceFragment(new FragmentHome());
+                        toolbar.setTitle("Início");
                         break;
-                    case R.id.itemGastos:
-                        Toast.makeText(TelaPrincipal.this, "teste gastos", Toast.LENGTH_SHORT).show();
-                    case R.id.itemConfig:
-                        Toast.makeText(TelaPrincipal.this, "teste config", Toast.LENGTH_SHORT).show();
+                    case R.id.itemSair:
+                        mudarTela();
                     default:
                         return true;
                 }
@@ -69,6 +68,9 @@ public class TelaPrincipal extends AppCompatActivity {
 
     }
 
+    public void mudarTela(){
+        startActivity(new Intent(this, MainActivity.class));
+    }
     public void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

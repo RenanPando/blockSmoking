@@ -9,7 +9,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.appfumas.Classes.Registros;
 import com.example.appfumas.Classes.Usuario;
+import com.example.appfumas.Fragments.FragmentHome;
+import com.example.appfumas.Fragments.FragmentRegistros;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -35,6 +38,9 @@ public class Login extends AppCompatActivity {
                 boolean logado = false;
                 String e = email.getText().toString();
                 String s = senha.getText().toString();
+                String[] split = e.split("@");
+                String id = split[0];
+                Registros.id = id;
                 for (DataSnapshot d : snapshot.getChildren()){
                     if (d.getValue(Usuario.class).getEmail().equals(e) && d.getValue(Usuario.class).getSenha().equals(s)) {
                         logado = true;

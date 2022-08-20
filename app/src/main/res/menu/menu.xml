@@ -13,9 +13,9 @@
             app:showAsAction="ifRoom" />
 
         <item
-            android:id="@+id/itemConta"
-            android:icon="@drawable/ic_account"
-            android:title="Conta"
+            android:id="@+id/itemHome"
+            android:icon="@drawable/ic_home"
+            android:title="Início"
             app:showAsAction="never" />
 
         <item
@@ -25,21 +25,9 @@
             app:showAsAction="never"/>
 
         <item
-            android:id="@+id/itemGraficos"
-            android:icon="@drawable/ic_graph"
-            android:title="Gráficos Mensais"
-            app:showAsAction="never" />
-
-        <item
-            android:id="@+id/itemGastos"
-            android:icon="@drawable/ic_gastos"
-            android:title="Gastos Mensais"
-            app:showAsAction="never" />
-
-        <item
-            android:id="@+id/itemConfig"
-            android:icon="@drawable/ic_config"
-            android:title="Configurações"
-            app:showAsAction="never" />
+            android:id="@+id/itemSair"
+            android:icon="@drawable/ic_logout"
+            android:title="Sair"
+            app:showAsAction="never"/>
     </group>
 </menu>
